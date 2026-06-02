@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmo 1 - Área y perímetro</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="maya"></div>
+  <div class="sobreFondo"></div>
+  <div class="main">
+    <div class="mainContainer">
+      <!-- Encabezado general-->
+      <div class="header">
+        <div class="head">
+          <div class="llave">{</div>
+          <div class="titulo"></i>
+            <h1>Algoritmo 1.</h1>
+          </div>
+          <div class="llave">}</div>
+        </div>
+        <p>Solución de algoritmos planteados en la guía de aprendizaje #3 aplicando estructuras de
+          almacenamiento.</p>
+        <span class="fase">Fase de planeación</span>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Contenido principal -->
+      <div class="container">
+        <div class="algoritmo1 contenidoAlgoritmo">
+          <!-- Titulo del algoritmo -->
+          <h2>Área y perímetro de figuras planas - Algoritmo 1</h2>
+          <section class="contenidoA1">
+            <!-- Figuras, parametros y resultados-->
+            <article class="figura triangulo">
+              <span class="subtitulo">Triángulo</span>
+              <div class="datos">
+                <div class="calcularPerimetro">
+                  <span>Para calcular el perímetro:</span>
+                  <div>
+                    <label for="ladoADelTriangulo">Lado A:</label>
+                    <input type="number" class="inputNumber input" id="ladoADelTriangulo" step="0.10" placeholder="a"
+                      min="0.01">
+                  </div>
+                  <div>
+                    <label for="ladoBDelTriangulo">Lado B:</label>
+                    <input type="number" class="inputNumber input" id="ladoBDelTriangulo" step="0.10" placeholder="b"
+                      min="0.01">
+                  </div>
+                  <div>
+                    <label for="ladoCDelTriangulo">Lado C:</label>
+                    <input type="number" class="inputNumber input" id="ladoCDelTriangulo" step="0.10" placeholder="c"
+                      min="0.01">
+                  </div>
+
+                  <button onclick="calcularPerimetroTriangulo()">Calcular</button>
+                </div>
+                <div class="lineaV"></div>
+                <div class="calcularArea">
+                  <span>Para calcular el área:</span>
+                  <div>
+                    <label for="baseDelTriangulo">Base:</label>
+                    <input type="number" class="inputNumber input" id="baseDelTriangulo" step="0.10" placeholder="b"
+                      min="0.01">
+                  </div>
+                  <div>
+                    <label for="alturaDelTriangulo">Altura:</label>
+                    <input type="number" class="inputNumber input" id="alturaDelTriangulo" step="0.10" placeholder="h"
+                      min="0.01">
+                  </div>
+
+                  <button onclick="calcularAreaTriangulo()">Calcular</button>
+                </div>
+              </div>
+              <div class="resultado">
+                <div>
+                  <label for="perimetroTriangulo">Perímetro:</label>
+                  <div id="resultadoPTriangulo"></div>
+                </div>
+                <div>
+                  <label for="areaTriangulo">Área:</label>
+                  <div id="resultadoATriangulo"></div>
+                </div>
+              </div>
+            </article>
+            <article class="figura rectangulo">
+              <span class="subtitulo">Rectángulo</span>
+              <div class="datos">
+                <span>Para calcular el perímetro y área</span>
+                <div class="lados">
+                  <div>
+                    <label for="ladoADelRectangulo">Lado A:</label>
+                    <input type="number" class="inputNumber input" id="ladoADelRectangulo" step="0.10" placeholder="a"
+                      min="0.01">
+                  </div>
+                  <div>
+                    <label for="ladoBDelRectangulo">Lado B:</label>
+                    <input type="number" class="inputNumber input" id="ladoBDelRectangulo" step="0.10" placeholder="b"
+                      min="0.01">
+                  </div>
+                </div>
+                <button onclick="calcularPerimetroRectangulo()">Calcular Perímetro</button>
+                <button onclick="calcularAreaRectangulo()">Calcular Área</button>
+              </div>
+              <div class="resultado">
+                <div>
+                  <label for="perimetroRectangulo">Perímetro:</label>
+                  <div id="resultadoPRectangulo"></div>
+                </div>
+                <div>
+                  <label for="areaRectangulo">Área:</label>
+                  <div id="resultadoARectangulo"></div>
+                </div>
+              </div>
+            </article>
+            <article class="figura cuadrado">
+              <span class="subtitulo">Cuadrado</span>
+              <div class="datos">
+                <span>Para calcular el perímetro y área</span>
+                <label for="ladoDelCuadrado">Lado:</label>
+                <input type="number" class="inputNumber input" id="ladoDelCuadrado" step="0.10" placeholder="a" min="0.01">
+
+                <button onclick="calcularPerimetroCuadrado()">Calcular Perímetro</button>
+                <button onclick="calcularAreaCuadrado()">Calcular Área</button>
+              </div>
+              <div class="resultado">
+                <div>
+                  <label for="perimetroCuadrado">Perímetro:</label>
+                  <div id="resultadoPCuadrado"></div>
+                </div>
+                <div>
+                  <label for="areaCuadrado">Área:</label>
+                  <div id="resultadoACuadrado"></div>
+                </div>
+              </div>
+            </article>
+            <article class="figura circulo">
+              <span class="subtitulo">Círculo</span>
+              <div class="datos">
+                <span>Para calcular el perímetro y área</span>
+                <label for="radioDelCirculo">Radio:</label>
+                <input type="number" class="inputNumber input" id="radioDelCirculo" step="0.10" placeholder="r" min="0.01">
+
+                <button onclick="calcularPerimetroCirculo()">Calcular Perímetro</button>
+                <button onclick="calcularAreaCirculo()">Calcular Área</button>
+              </div>
+              <div class="resultado">
+                <div>
+                  <label for="perimetroCirculo">Perímetro:</label>
+                  <div id="resultadoPCirculo"></div>
+                </div>
+                <div>
+                  <label for="areaCirculo">Área:</label>
+                  <div id="resultadoACirculo"></div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Pie de pagina -->
+      <div class="footer">
+        <p>By - <span>Andres Tafur Soto</span> | <a href="mailto:tafursotoandres32@gmail.com"
+            aria-label="redactar correo"><i class="fa-solid fa-envelope fa-xl"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/531e43a2f9.js" crossorigin="anonymous"></script>
+  <script src="../js/algoritmo1.js"></script>
+</body>
+
+</html>

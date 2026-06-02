@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algortimo 2 - Edades</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="maya"></div>
+  <div class="sobreFondo"></div>
+  <div class="main">
+    <div class="mainContainer">
+      <!-- Encabezado general-->
+      <div class="header">
+        <div class="head">
+          <div class="llave">{</div><div class="titulo"></i><h1>Algoritmo 2.</h1></div><div class="llave">}</div>
+        </div>
+        <p>Solución de algoritmos planteados en la guía de aprendizaje #3 aplicando estructuras de
+          almacenamiento.</p>
+        <span class="fase">Fase de planeación</span>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Contenido principal-->
+      <div class="container">
+        <!-- Algoritmo 2: Edades -->
+        <div class="algoritmo2 contenidoAlgoritmo">
+          <!-- Titulo del algoritmo -->
+          <h2>Edades - Algoritmo 2</h2>
+          <section class="contenidoA2">
+            <!-- Desarrollo del algoritmo-->
+            <div class="datos">
+              <!-- Ingreso de datos y resultados obtenidos-->
+              <div class="ingresarEdades">
+                <span>Ingrese las edades de 10 personas una por una</span>
+                <input type="number" class="inputNumber input" id="edad" step="1" placeholder="0" min="1" max="120">
+
+                <button onclick="ingresarEdad()">Ingresar</button>
+                <button onclick="limpiarEdades()">Limpiar</button>
+              </div>
+              <div class="edadesIngresadas">
+                Edades ingresadas:
+                <div id="listaEdades"></div>
+              </div>
+              <div class="resultados">
+                <div>
+                  en el grupo hay <span id="cantidadMenores"></span> menores de edad
+                </div>
+                <div>
+                  en el grupo hay <span id="cantidadMayores"></span> mayores de edad
+                </div>
+                <div>
+                  en el grupo hay <span id="cantidadAdultosMayores"></span> adultos mayores
+                </div>
+                <div>
+                  la edad mas baja es: <span id="edadMinima"></span>
+                </div>
+                <div>
+                  la edad mas alta es: <span id="edadMaxima"></span>
+                </div>
+                <div>
+                  el promedio de edad del grupo es: <span id="promedioEdades"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Pie de pagina -->
+      <div class="footer">
+        <p>By - <span>Andres Tafur Soto</span> | <a href="mailto:tafursotoandres32@gmail.com" aria-label="redactar correo"><i
+              class="fa-solid fa-envelope fa-xl"></i></a></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/531e43a2f9.js" crossorigin="anonymous"></script>
+  <script src="../js/algoritmo2.js"></script>
+</body>
+
+</html>

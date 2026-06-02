@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmo 4 - Rating Emisora</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="maya"></div>
+  <div class="sobreFondo"></div>
+  <div class="main">
+    <div class="mainContainer">
+      <!-- Encabezado general -->
+      <div class="header">
+        <div class="head">
+          <div class="llave">{</div>
+          <div class="titulo"><h1>Algoritmo 4.</h1></div>
+          <div class="llave">}</div>
+        </div>
+        <p>Solución de algoritmos planteados en la guía de aprendizaje #3 aplicando estructuras de almacenamiento.</p>
+        <span class="fase">Fase de planeación</span>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Contenido principal -->
+      <div class="container">
+        <div class="algoritmo4 contenidoAlgoritmo">
+          <!-- Título de la sección -->
+          <h2>Rating de emisora — Algoritmo 4</h2>
+          <section class="contenidoA4">
+            <!-- Descripción del sistema -->
+            <div class="bienvenida">
+              <h3 class="subtitulo">Bienvenido</h3>
+              <p>Con este sistema podrá medir el rating de la emisora y saber qué prefieren escuchar sus oyentes,
+                así mismo realizar un sorteo entre ellos.</p>
+            </div>
+
+            <!-- Bloque sorteo -->
+            <article class="tarjeta">
+              <h3 class="subtitulo">Sorteo</h3>
+              <p>La descripción es opcional.</p>
+              <div class="sorteo">
+                <!-- Campo de descripción -->
+                <input type="text" id="descripcionSorteo" class="input" placeholder="Descripción del sorteo (opcional)">
+                <button class="btn btnAccentA4" onclick="sortear()">Realizar sorteo</button>
+              </div>
+            </article>
+
+            <!-- Bloque oyentes -->
+            <article class="tarjeta tarjetaOyentes">
+              <h3 class="subtitulo">Oyentes</h3>
+              <p>Ingrese un máximo de 6 personas y hasta 3 canciones por persona.</p>
+              <!-- Botón para iniciar el formulario de agregar persona -->
+              <button id="agregarPersonaBtn" class="btn" onclick="agregarPersona()">+ Agregar persona</button>
+              <!-- Formulario de personas (se reutiliza para las acciones agregar, editar y mostrar) -->
+              <div class="formularioPersona" id="datosPersona">
+                <!-- Título del formulario (cambia según la acción) -->
+                <span class="formularioTitulo" id="head">Agregar nueva persona</span>
+                <!-- Campos de datos personales -->
+                <div class="propiedades" id="propiedadesPersona">
+                  <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" class="input" placeholder="Nombre completo">
+                  </div>
+                  <div class="campo">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" id="cedula" class="input" placeholder="Número de identificación">
+                  </div>
+                  <div class="campo">
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fechaNacimiento" class="input">
+                  </div>
+                  <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" class="input" placeholder="ejemplo@correo.com">
+                  </div>
+                  <div class="campo">
+                    <label for="ciudadOrigen">Ciudad de origen</label>
+                    <input type="text" id="ciudadOrigen" class="input" placeholder="Ciudad de origen">
+                  </div>
+                  <div class="campo">
+                    <label for="ciudadResidencia">Ciudad de residencia</label>
+                    <input type="text" id="ciudadResidencia" class="input" placeholder="Ciudad de residencia">
+                  </div>
+                </div>
+
+                <!-- Subseccion de canciones -->
+                <div class="cancionesPersonas" id="canciones">
+                  <h4 class="cancionesPersonasTitulo">Canciones favoritas</h4>
+                  <!-- Lista de canciones agregadas -->
+                  <div class="listaCanciones" id="listaCanciones"></div>
+                  <!-- Botón agregar canción -->
+                  <button id="agregarCancionBtn" class="btn btnsm" onclick="agregarCancion()">
+                    + Agregar canción
+                  </button>
+                  <!-- Formulario de canción -->
+                  <div class="formularioCancion" id="datosCancion">
+                    <div class="campo">
+                      <label for="titulo">Título</label>
+                      <input type="text" id="titulo" class="input" placeholder="Título de la canción">
+                    </div>
+                    <div class="campo">
+                      <label for="artista">Artista</label>
+                      <input type="text" id="artista" class="input" placeholder="Nombre del artista">
+                    </div>
+                    <!-- Botón insertar/actualizar canción -->
+                    <button id="cancionBtn" class="btn btnsm">Insertar</button>
+                  </div>
+                </div>
+
+                <!-- Botón Insertar/Actualizar persona -->
+                <button id="personaBtn" class="btn btnPrimary">Insertar</button>
+              </div>
+
+              <!-- Tabla de personas registradas -->
+              <table class="tabla">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Ciudad origen</th>
+                    <th>Ciudad residencia</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody class="listaPersonas"></tbody>
+              </table>
+
+            </article>
+          </section>
+        </div>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Pie de pagina -->
+      <div class="footer">
+        <p>By - <span>Andres Tafur Soto</span> | 
+          <a href="mailto:tafursotoandres32@gmail.com" aria-label="Redactar correo">
+            <i class="fa-solid fa-envelope fa-xl"></i>
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/531e43a2f9.js" crossorigin="anonymous"></script>
+  <script src="../js/algoritmo4.js"></script>
+</body>
+</html>

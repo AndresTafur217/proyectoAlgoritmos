@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmo 3 - Organizar números</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="maya"></div>
+  <div class="sobreFondo"></div>
+  <div class="main">
+    <div class="mainContainer">
+      <!-- Encabezado general -->
+      <div class="header">
+        <div class="head">
+          <div class="llave">{</div><div class="titulo"></i><h1>Algoritmo 3.</h1></div><div class="llave">}</div>
+        </div>
+        <p>Solución de algoritmos planteados en la guía de aprendizaje #3 aplicando estructuras de
+          almacenamiento.</p>
+        <span class="fase">Fase de planeación</span>
+      </div>
+      <div class="lineaH"></div>
+      <div class="container">
+        <!-- Contenido principal -->
+        <div class="algoritmo3 contenidoAlgoritmo">
+          <!-- Titulo del algoritmo -->
+          <h2>Organizar números ascendentemente - Algoritmo 3</h2>
+          <p>En este algoritmo debe ingresar un total de 10 números en dos partes, en uno 5 números y en otro los otros 5
+            números</p>
+          <section class="contenidoA3">
+            <!-- Desarrollo del algoritmo, insercion de datos y obtención de resultados -->
+            <div class="datos">
+              <div class="ingresarNumeros">
+                <span>Ingrese 5 números uno por uno de forma ascendente</span>
+                <input type="number" class="inputNumber input" id="primerosNumeros" step="1" placeholder="1">
+
+                <button id="ingresarP" onclick="ingresarPNumero()">Ingresar</button>
+                <button onclick="limpiarPNumeros()">Limpiar</button>
+              </div>
+              <div class="ingresarNumeros">
+                <span>Ingrese otros 5 números uno por uno de forma ascendente</span>
+                <input type="number" class="inputNumber input" id="segundosNumeros" step="1" placeholder="1">
+
+                <button id="ingresarS" onclick="ingresarSNumero()">Ingresar</button>
+                <button onclick="limpiarSNumeros()">Limpiar</button>
+              </div>
+              <div class="numerosIngresados">
+                Números ingresados:
+                <div id="listaNumeros"></div>
+              </div>
+              <div class="resultados">
+                <div>
+                  los números ordenados de forma ascendente son: <span id="numerosOrdenados"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="lineaH"></div>
+      <!-- Pie de pagina -->
+      <div class="footer">
+        <p>By: <span>Andres Tafur Soto</span> | <a href="mailto:tafursotoandres32@gmail.com" aria-label="redactar correo"><i
+              class="fa-solid fa-envelope fa-xl"></i></a></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/531e43a2f9.js" crossorigin="anonymous"></script>
+  <script src="../js/algoritmo3.js"></script>
+</body>
+
+</html>
